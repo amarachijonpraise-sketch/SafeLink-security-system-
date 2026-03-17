@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Incident Dashboard</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Report Incident</title>
+<!--link rel="stylesheet" href="css/style.css"-->
+<style>
+  /* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #2a5298;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs, Select & Textarea */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Textarea Resize */
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #2a5298;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+button:hover {
+    background: #1e3c72;
+}
+
+/* Input Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2a5298;
+    outline: none;
+    box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+}
+</style>
 </head>
 
 <body>
 
-<h2>Reported Incidents</h2>
+<div class="container">
+    <h2>Report a Security Incident</h2>
 
-<table border="1">
-<tr>
-<th>Type</th>
-<th>Location</th>
-<th>Status</th>
-</tr>
+    <form>
+        <label>Incident Type</label>
+        <select>
+            <option>Robbery</option>
+            <option>Kidnapping</option>
+            <option>Violence</option>
+            <option>Other</option>
+        </select>
 
-<tr>
-<td>Robbery</td>
-<td>Owerri</td>
-<td>Reported</td>
-</tr>
+        <label>Location</label>
+        <input type="text" placeholder="Enter location">
 
-<tr>
-<td>Kidnapping</td>
-<td>Lagos</td>
-<td>Investigating</td>
-</tr>
+        <label>Description</label>
+        <textarea placeholder="Describe the incident"></textarea>
 
-</table>
+        <button type="submit">Submit Report</button>
+    </form>
+</div>
 
 </body>
-</html>
+  </html>
