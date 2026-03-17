@@ -1,22 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SafeLink Security System</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>SafeLink Security System</title>
+    <!--link rel="stylesheet" href="css/style.css"-->
+    <style>
+      /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styles */
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #00c6ff;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+/* Secondary button */
+.btn.secondary {
+    background: #ff7e5f;
+}
+
+/* Hover effects */
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+    </style>
 </head>
 
 <body>
 
-<h1>SafeLink Security System</h1>
-<p>A platform for reporting and tracking security incidents in communities.</p>
+    <div class="container">
+        <h1>SafeLink Security System</h1>
+        <p>A platform for reporting and tracking security incidents in communities.</p>
 
-<a href="report.html">
-<button>Report an Incident</button>
-</a>
+        <div class="buttons">
+            <a href="report.html">
+                <button class="btn">Report an Incident</button>
+            </a>
 
-<a href="dashboard.html">
-<button>View Incidents</button>
-</a>
+            <a href="dashboard.html">
+                <button class="btn secondary">View Incidents</button>
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
