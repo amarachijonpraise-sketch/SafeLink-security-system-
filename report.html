@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Report Incident</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Incident Dashboard</title>
+<!--link rel="stylesheet" href="css/style.css"-->
+<style>
+  /* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling */
+.container {
+    width: 70%;
+    margin: 60px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header */
+th {
+    background-color: #2a5298;
+    color: white;
+    padding: 12px;
+}
+
+/* Table cells */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Status styles */
+.reported {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.investigating {
+    color: #e74c3c;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
 
-<h2>Report a Security Incident</h2>
+<div class="container">
+    <h2>🚨 Reported Incidents</h2>
 
-<form>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Status</th>
+        </tr>
 
-<label>Incident Type</label>
-<br>
-<select>
-<option>Robbery</option>
-<option>Kidnapping</option>
-<option>Violence</option>
-<option>Other</option>
-</select>
+        <tr>
+            <td>Robbery</td>
+            <td>Owerri</td>
+            <td class="reported">Reported</td>
+        </tr>
 
-<br><br>
-
-<label>Location</label>
-<br>
-<input type="text" placeholder="Enter location">
-
-<br><br>
-
-<label>Description</label>
-<br>
-<textarea placeholder="Describe the incident"></textarea>
-
-<br><br>
-
-<button type="submit">Submit Report</button>
-
-</form>
+        <tr>
+            <td>Kidnapping</td>
+            <td>Lagos</td>
+            <td class="investigating">Investigating</td>
+        </tr>
+    </table>
+</div>
 
 </body>
 </html>
